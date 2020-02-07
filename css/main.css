@@ -1,0 +1,421 @@
+@charset "utf-8";
+@import url("normalize.css");
+
+/* 전체 설정 */
+*, *::before, *::after {
+    font-size: 10px;
+    box-sizing: border-box;
+}
+body {
+    font-size: 1.4rem;
+    margin: 0px;
+    padding: 0px;
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+.icon-right-open {
+    /* font-size: 3rem; */
+    /* text-align: center; */
+    vertical-align: center;
+}
+/* 숨김콘텐츠 표시 */
+.readable-hidden {
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    clip: (0,0,0,0);
+    clip-path: (0,0,0);
+}
+
+.body__container {
+    min-width: 1400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.header {
+    background: skyblue;
+    width: 100%;
+    display: flex;
+    padding-left: 0;
+    padding-right: 0;
+    min-height: 1400px;
+    background: no-repeat url(../images/main-01-desktop.jpg);
+    background-size: cover;
+    position: relative;
+}
+.navigation {
+    position: fixed;
+    height: 100px;
+    width: 100%;
+}
+.header-logo a {  
+    background-image: url();
+    display: inline-block;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    
+}
+.header-logo a {
+    padding: 15px;
+}
+.menu {
+    display: flex;
+    margin-left: 100px;
+    min-width: 1350px;
+    font-size: 0;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu li:nth-child(3) {
+    margin-right: auto;
+}
+.menu li:nth-last-child(1) {
+    margin-right: 100px;
+}
+.menu li {
+    margin-top: 40px;
+    font-weight: 700;
+}
+.menu a {
+    cursor: pointer;
+    padding: 10px;
+    margin: 30px 0 30px 0;
+    font-size: 3rem;
+    font-weight: 900;
+}
+.reservation {
+    /* background-color: yellow; */
+    position: absolute;
+    top: 30%;
+    left: 25%;
+    right: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    line-height: 1.5;
+}
+.reservation-text span {
+    color: white;
+    font-size: 9rem;
+    font-weight: 900;
+}
+.reservation-text span:nth-of-type(2) {
+    display: block;
+    font-size: 4rem;
+    font-weight: 500;
+}
+.btn-reservation {
+    background-color: blue;
+    color: white;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-top: 10%;
+    padding: 30px 100px;
+    border: none;
+    border-radius: 10px;
+}
+.main {
+    background: white;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    width: 100%;
+}
+.introduction, .service, .about-service, .aside {
+    box-shadow: 0px 1px 0px 0px rgba(0,0,0,0.75);
+    width: 80%;
+}
+
+.introduction {
+    min-height: 70vh;
+    background: white no-repeat center url(../images/main-2@2x.png);
+    background-size: 50% 70%;
+    background-position-x: 90%;
+    display: inline-flex;
+    flex-direction: column;
+}
+.introduction-text {
+    margin: 20% 0 0 15%;
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1.3;
+    flex-grow: unset;
+    /* width: 400px; */
+}
+.introduction-link {
+    display: block;
+    margin: 30px 0 0 15%;
+    font-size: 3rem;
+    font-weight: 700;
+    color: blue;
+    padding: 3px;
+    flex-grow: unset;
+    /* width: 100px; */
+}
+.service {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* height */
+}
+.service span:nth-of-type(1) {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin: 40px auto 40px 120px;
+} 
+.main-service {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 500px;
+    background-color: white;
+}
+.main-service a:nth-of-type(n+1) {
+    width: 48%;
+    background-size: cover;
+}
+.main-service-item1 {
+    background: rgb(167, 167, 110) no-repeat url(../images/main-3-1-desktop@2x.jpg);
+}
+.main-service-item2 {
+    background: pink no-repeat url(../images/main-3-2-desktop@2x.jpg);
+}
+.main-service p {
+    font-size: 3rem;
+    font-weight: 900;
+    margin: 30px 0 0 30px;
+}
+.main-service p:nth-of-type(n+2){
+    font-size: 2rem;
+}
+.other-service {
+    min-width: 100%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+}
+.other-service-text {
+    display: inline-block;
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin: 40px 0 40px 120px;
+}
+.other-service-list {
+    display: flex;
+    justify-content: space-evenly;
+    height: 300px;
+}
+.other-service-list a:nth-of-type(n+1) {
+    width: 30%;
+    background-size: cover;
+}
+.other-service-list p {
+    margin: 30px 0 0 30px;
+    font-size: 3rem;
+    font-weight: 900;
+}
+.other-service-item1 {
+    background: yellow no-repeat url(../images/main-3-3-desktop@2x.jpg);
+}
+.other-service-item2 {
+    background: yellow no-repeat url(../images/main-3-4-desktop@2x.jpg);
+}
+.other-service-item3 {
+    background: yellow no-repeat url(../images/main-3-5-desktop@2x.jpg);
+}
+.more-service {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: cyan;
+    padding: 30px 50px;
+    line-height: 2;
+    margin-bottom: 100px;
+}
+.more-service-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 85%;
+}
+.more-service-text {
+    font-size: 3.5rem;
+    font-weight: 800;
+}
+.more-service a {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: blue;
+}
+.more-service p:nth-of-type(n+1) {
+    font-size: 3rem;
+    width: 85%;
+    margin: 0;
+}
+.about-service {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+.about-service-text {
+    width: 100%;
+    line-height: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 100px 0;
+}
+.about-service-text span {
+    font-size: 3.5rem;
+    font-weight: 800;
+}
+.about-service-text p {
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+.about-service-list {
+    width: 100%;
+    font-size: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.about-service-list li {
+    min-height: 500px;
+    min-width: 400px;
+    background-size: 40% 95%;
+    background-position-x: 10%;
+}
+.about-service-list li:nth-last-child(1) {
+    margin-bottom: 100px;
+}
+.about-service-list span {
+    display: block;
+    margin-top: 6%;
+    font-size: 3rem;
+    font-weight: 700;
+}
+.about-service-list p, .about-service-list a {
+    font-size: 2rem;
+    font-weight: 500;
+}
+.about-service-list a {
+    color: blue;
+    font-weight: 600;
+}
+.about-service-list span,
+.about-service-list p,
+.about-service-list a 
+ {  
+    line-height: 2;
+    margin-left: 55%;
+}
+.about-service-item1 {
+    background: no-repeat left url(../images/main-4-1@2x.png);
+}
+.about-service-item2 {
+    background: no-repeat left url(../images/main-4-2@2x.png);
+}
+.about-service-item3 {
+    background: no-repeat left url(../images/main-4-3@2x.png);
+}
+.review {
+    background-color: navy;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 600px;
+}
+.review-text {
+    color: white;
+    margin-left: 8%;
+    margin-top: 100px;
+    font-size: 3.5rem;
+    font-weight: 800;
+}
+.review-list {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 100px 0;
+}
+.review-list li:nth-child(n+1) {
+    background-color: white;
+    width: 25%;
+    line-height: 1.5;
+}
+.review-list li:nth-child(n+1) span:nth-of-type(n+1) {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+.review-list li:nth-child(n+1) p:nth-of-type(n+1) {
+    font-size: 2rem;
+}
+.review-list li:nth-child(n+1) a:nth-of-type(n+1) {
+    font-size: 2rem;
+    font-weight: 500;
+    color: blue;
+}
+.aside {
+    background: no-repeat right url(../images/hiring@2x.png);
+    background-position-x: 80%;
+    background-size: 50% 100%;
+    height: 700px;
+    box-shadow: inset 0px 0px 0px 10em #fff;
+    display: inline-block;
+    padding: 10%;
+}
+.aside>* {
+    font-size: 3rem;
+    font-weight: 800;
+}
+.aside a {
+    font-weight: 700;
+    color: blue;
+}
+.footer {
+    width: 100%;
+    background: #aaa;
+}
+.footer-wrapper {
+    width: 80%;
+    margin: 0 auto;
+}
+.copyright {
+    color: white;
+    font-size: 3rem;
+    font-weight: 900;
+}
+.footer-menu {
+    display: flex;
+    margin-left: 100px;
+}
+.footer-menu li {
+    margin-left: 20px;
+}
+.footer-menu a {
+    font-size: 3rem;
+    font-weight: 900;
+    padding: 3px;
+}
+
+.address {
+    font-weight: 900;
+    font-size: 3rem;
+}
